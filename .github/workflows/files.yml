@@ -1,0 +1,17 @@
+name: Files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Maak directory aan
+        run: mkdir mijnmap
+
+      - name: Schrijf bestand
+        run: echo "Hallo vanuit GitHub Actions" > mijnmap/tekst.txt
+
+      - name: Toon inhoud directory
+        run: ls -alh mijnmap
